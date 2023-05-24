@@ -1,12 +1,7 @@
 <h1>Create a New Review</h1>
 
 <%= simple_form_for([@restaurant, @review]) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <%= f.label :rating %>
-  <%= f.text_field :rating %>
-  <%= f.label :content %>
-  <%= f.text_field :content %>
+  <%= f.input :rating %>
+  <%= f.input :content %>
   <%= f.submit %>
 <% end %>
